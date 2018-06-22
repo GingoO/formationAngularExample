@@ -1,0 +1,9 @@
+
+  Bienvenue sur la page d'administration.
+  <button (click)="unloginOpenDialog()">Désautorisez-vous les détails</button>
+  <button (click)="retourAppli()">Retourner à l'application</button>
+  <div *ngIf="adminName">Le gars qui a fait les modifs, c'est {{adminName}}</div>
+  <p-growl [(value)]="msgs"></p-growl>
+  <router-outlet></router-outlet>
+
+

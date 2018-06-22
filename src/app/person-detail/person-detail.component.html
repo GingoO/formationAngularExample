@@ -1,0 +1,9 @@
+<div *ngIf="personDetail">
+  <div><img [src]="personDetail.imageUrl"/></div>
+  <div>Nom : {{personDetail.name}}</div>
+  <div>Sexe : {{personDetail.gender}}</div>
+  <div>Statut : {{personDetail.status}}</div>
+  <div>Type : {{personDetail.type}}</div>
+  <div>Species : {{personDetail.species}}</div>
+</div>
+<button (click)="goToListViaRoute()">Retour à la liste</button>

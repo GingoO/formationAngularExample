@@ -1,0 +1,7 @@
+<button (click)="unlogin()">Désactivation des détails</button>
+<form [formGroup]="formGroup2" (ngSubmit)="closeModalAndGetAdminName()">
+  <div>
+    <label>Nom de l'admin qui fait des modifs</label><input required formControlName="lePtitNom"/>
+    <button type="submit">Fermer</button>
+  </div>
+</form>

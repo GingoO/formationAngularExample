@@ -1,0 +1,17 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <button (click)="logging()">Autorise moi à voir les détails !</button>
+  <button (click)="loadChuckDialog()">Gimme a joke!</button>
+
+<mat-list>
+  <mat-list-item *ngFor="let person of listPeople" [ngStyle]="{'color': person.getColor()}"> {{person.name}}  ;  <a [routerLink]="['/person', person.id]">Détails</a></mat-list-item>
+</mat-list>
+<div *ngIf="objectInformation">
+  <div>{{objectInformation.count}} éléments sur {{objectInformation.pages}} pages</div>
+  <button (click)="precedentClick()" [disabled]="!objectInformation.prev">Précédent</button>
+  <button (click)="suivantClick()" [disabled]="!objectInformation.next">Suivant</button>
+  <div>Page numéro : {{ monService.pageListNumber }}</div>
+</div>
+<a [routerLink]="['admin']">ADMIN</a>
